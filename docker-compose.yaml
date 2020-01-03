@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  app:
+    image: node:12-alpine
+    working_dir: /app
+    ports:
+      - 3000:3000
+      - 3572:3572
+    volumes:
+      - .:/app
+      - nedb-data:/app/data
+    command: index.js
+    environment:
+      NODE_ENV: development
+      HOST: 0.0.0.0
+      MONGO_URL: 'mongodb://mongo:27017'
+volumes:
+  nedb-data:
