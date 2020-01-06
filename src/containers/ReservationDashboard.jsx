@@ -69,7 +69,7 @@ function ReservationDashboard() {
 				title="Book your reservation!"
 				cancel={closeReservationModal}
 				isOpen={isReservationModalOpen}
-				saveReservation={addReservation}
+				onSave={addReservation}
 			/>
 		</>
 	);

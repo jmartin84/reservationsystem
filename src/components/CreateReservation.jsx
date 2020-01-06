@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import propTypes from 'prop-types';
 
-function CreateReservation({ saveReservation, cancel }) {
+function CreateReservation({ onSave, cancel }) {
 	const save = async (e) => {
 		const data = {
 			guest: e.target.fullName.value,
@@ -11,7 +11,7 @@ function CreateReservation({ saveReservation, cancel }) {
 			departure: e.target.departureDate.value,
 		};
 
-		await saveReservation(data);
+		await onSave(data);
 	}
 
     return (
@@ -49,12 +49,12 @@ function CreateReservation({ saveReservation, cancel }) {
 }
 
 CreateReservation.propTypes = {
-	saveReservation: propTypes.func,
+	onSave: propTypes.func,
 	cancel: propTypes.func
 };
 
 CreateReservation.defaultProps = {
-	saveReservation: () => {},
+	onSave: () => {},
 	cancel: () => {}
 };
 
