@@ -15,14 +15,14 @@ function CreateReservation({ onSave, cancel }) {
 	}
 
     return (
-		<Form onSubmit={save}>
+		<Form onSubmit={save} className="reservation-form">
 			<Form.Group controlId="fullName">
 				<Form.Label>Full Name</Form.Label>
-				<Form.Control />
+				<Form.Control className="fullname"/>
 			</Form.Group>
 			<Form.Group controlId="hotel">
 				<Form.Label>Hotel</Form.Label>
-				<Form.Control as="select">
+				<Form.Control as="select" className="hotel">
 					<option>Hilton, New Orleans</option>
 					<option>Hilton, Dallas</option>
 					<option>Hilton, New York</option>
@@ -32,16 +32,16 @@ function CreateReservation({ onSave, cancel }) {
 			</Form.Group>
 			<Form.Group controlId="arrivalDate">
 				<Form.Label>Arrival Date</Form.Label>
-				<Form.Control type="datetime-local"/>
+				<Form.Control type="date" className="arrivalDate"/>
 			</Form.Group>
 			<Form.Group controlId="departureDate">
 				<Form.Label>Departure Date</Form.Label>
-				<Form.Control type="datetime-local"/>
+				<Form.Control type="date" className="departureDate"/>
 			</Form.Group>
-			<Button variant="secondary" onClick={cancel} style={{marginRight: "8px", float: "right"}}>
+			<Button className="cancel" variant="secondary" onClick={cancel} style={{marginRight: "8px", float: "right"}}>
 				Cancel
 			</Button>
-			<Button variant="primary" type="submit" style={{marginRight: "8px", float: "right"}}>
+			<Button className="save" variant="primary" type="submit" style={{marginRight: "8px", float: "right"}}>
 				Submit
 			</Button>
 		</Form>

@@ -7,8 +7,8 @@ export default gql`
 		id: ID!
 		guest: String!
 		hotel: String!
-		arrival: Date!
-		departure: Date!
+		arrival: String!
+		departure: String!
 	}
 
 	type Query {
@@ -17,6 +17,6 @@ export default gql`
 	}
 
 	type Mutation {
-		createReservation(guest: String!, hotel: String!, arrival: Date!, departure: Date!): Reservation!
+		createReservation(guest: String!, hotel: String!, arrival: String!, departure: String!): Reservation!
 	}
 `;

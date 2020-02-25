@@ -1,7 +1,7 @@
 import React from 'react';
-import { Table, Container, Dropdown, DropdownButton, Pagination } from 'react-bootstrap';
-import propTypes from 'prop-types';
+import { Table, Dropdown, DropdownButton } from 'react-bootstrap';
 import moment from 'moment';
+import propTypes from 'prop-types';
 
 function Reservations({ reservations, setNumberOfResults, numberOfResults }) {
     const rows = reservations.map((row, index) => (
@@ -9,8 +9,8 @@ function Reservations({ reservations, setNumberOfResults, numberOfResults }) {
 			<td>{index + 1}</td>
 			<td>{row.guest}</td>
 			<td>{row.hotel}</td>
-			<td>{moment(row.arrival).format("MM/DD/YYYY, h:mm:ss a")}</td>
-			<td>{moment(row.departure).format("MM/DD/YYYY, h:mm:ss a")}</td>
+			<td>{moment(row.arrival).format("MM/DD/YYYY")}</td>
+			<td>{moment(row.departure).format("MM/DD/YYYY")}</td>
 		</tr>
 	));
 

@@ -1,4 +1,4 @@
 {
 	"presets": ["@babel/preset-env", "@babel/preset-react"],
-	"plugins": ["jsx-control-statements", "@babel/transform-runtime"]
+	"plugins": ["jsx-control-statements", "@babel/plugin-transform-runtime"]
 }

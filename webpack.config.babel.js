@@ -2,7 +2,7 @@ import LiveReloadPlugin from 'webpack-livereload-plugin';
 
 export default {
 	devtool: "eval",
-	entry: "./src/Index.jsx",
+	entry: "./app/Index.jsx",
 	mode: process.env.NODE_ENV || 'development',
 	output: {
 		filename: "app.js",

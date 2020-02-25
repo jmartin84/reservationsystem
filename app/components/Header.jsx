@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Button, Container } from 'react-bootstrap';
+import { Navbar, Button } from 'react-bootstrap';
 import propTypes from 'prop-types';
 
 const { Brand } = Navbar;
