@@ -42,7 +42,7 @@
 		"nyc": "^15.0.0",
 		"prop-types": "^15.7.2",
 		"sinon": "^9.0.0",
-		"webpack": "^4.41.4",
+		"webpack": "^5.75.0",
 		"webpack-dev-middleware": "^3.7.2",
 		"webpack-livereload-plugin": "^2.2.0"
 	},
